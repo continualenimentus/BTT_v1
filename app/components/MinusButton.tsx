@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
-const PlusButton = (handleOnClick: any) => {
+const MinusButton = (handleOnClick: any) => {
   return (
     <TouchableOpacity style={styles.PlusButton} onPress={handleOnClick}  >
-      <Text>+</Text>
+      <Text>-</Text>
     </TouchableOpacity>
   );
 };
@@ -14,10 +14,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor:'green',
+    backgroundColor:'red',
     width: 50,
     height: 50,
   }
 });
 
-export default PlusButton;
+export default MinusButton;
