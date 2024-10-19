@@ -1,10 +1,10 @@
 import { Text, View, StyleSheet, Button } from "react-native";
 import { Link } from "expo-router";
+import { styles } from "@/assets/styles/styles";
 
 export default function Index() {
   const handleRaceFromScratch = () => {
     console.log("Racet from scratch");
-
   };
 
   const handleRaceFromPreset =() =>{ 
@@ -21,20 +21,16 @@ export default function Index() {
 
   return (
     <View style={styles.container}>
-      <Text>Biathlon time trial app</Text>
-      <Button title="Race from scratch" onPress={() => handleRaceFromScratch()} />
+      {/* <Link href={'/raceFromScratch'}> */}
+        <Button title="Race from scratch" onPress={() => handleRaceFromScratch()} />
+      {/* </Link> */}
       <Button title="Race from preset" onPress={() => handleRaceFromPreset()} />
       <Button title="Make new preset" onPress={() => handleMakeNewPreset()} />
-      <Button title="Add athlete" onPress={() => handleAddAthlete()} />
+
+      <Link href='/addAthlete'>
+        Add athlete
+      </Link>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    display: "flex",//this is done by default
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-});
