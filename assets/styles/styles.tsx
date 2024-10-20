@@ -25,4 +25,8 @@ export const styles = StyleSheet.create({
     width: 250,
     flexDirection: 'row',
   },
+  MainPageLink:{
+    fontSize: 20,
+    color: 'blue',
+  }
 });
