@@ -20,9 +20,10 @@ export default function Index() {
   return (
     <VStack space="lg">
       <Link href='/raceFromPreset' style={styles.MainPageLink}>Race from preset</Link>
-      <Link href='/raceFromScratch' style={styles.MainPageLink}></Link>
+      <Link href='/raceFromScratch' style={styles.MainPageLink}>Henlo there</Link>
       <Link href='/makeNewPreset' style={styles.MainPageLink}>Make new preset</Link>
       <Link href='/addAthlete' style={styles.MainPageLink}>Add athlete</Link>
+      <Link href='/home' style={styles.MainPageLink}>Home</Link>
     </VStack>
   );
 }

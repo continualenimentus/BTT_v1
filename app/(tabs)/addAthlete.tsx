@@ -1,10 +1,11 @@
 import { Text, View, StyleSheet, Button } from "react-native";
-import AthleteList from "./components/AthleteList";
-import NameInput from "./components/NameInput";
 import { useState } from "react";
-import DateOfBirthInput from "./components/DateOfBirthInput";
-import SexInput from "./components/SexInput";
 import { styles } from "@/assets/styles/styles";
+import AthleteList from "../components/AthleteList";
+import NameInput from "../components/NameInput";
+import SexInput from "../components/SexInput";
+import DateOfBirthInput from "../components/DateOfBirthInput";
+
 
 const templateAthletes = [
     {name: "Athlete 1", 
@@ -53,7 +54,6 @@ export default function addAthlete() {
             alert("Please fill in all fields");
         }
     }
-
 
   return (
     <View style={styles.container}>
