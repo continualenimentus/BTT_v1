@@ -1,15 +1,50 @@
+import { Table,
+  TableHeader,
+  TableFooter,
+  TableBody,
+  TableHead,
+  TableData,
+  TableRow,
+  TableCaption,} from '@/components/ui/table';
 import React from 'react';
 import { StyleSheet, Text, View, FlatList } from 'react-native';
 
 const AthleteList = ({ athletes }: { athletes: any[] }) => {
   return (
-    <FlatList
-      data={athletes}
-      style={styles.athleteList}
-      renderItem={({ item }) => <AthleteListItem athlete={item} />}
-      keyExtractor={(item) => item.id}
-      ListHeaderComponent={<AthleteListHeader />}
-    />
+    // <FlatList
+    //   data={athletes}
+    //   style={styles.athleteList}
+    //   renderItem={({ item }) => <AthleteListItem athlete={item} />}
+    //   keyExtractor={(item) => item.id}
+    //   ListHeaderComponent={<AthleteListHeader />}
+    // />
+    
+    <Table className="w-full">
+      <TableHeader>
+        <TableRow>
+          <TableHead>Name</TableHead>
+          <TableHead>Sex</TableHead>
+          <TableHead>Date of Birth</TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {athletes.map((athlete) => (
+          <TableRow key={athlete.id} >
+            <TableData>{athlete.name}</TableData>
+            <TableData>{athlete.sex}</TableData>
+            <TableData>{athlete.dob}</TableData>
+            </TableRow>
+        ))}
+      </TableBody>
+      <TableFooter>
+        <TableRow>
+          <TableHead>Total</TableHead>
+          <TableHead></TableHead>
+          <TableHead>{athletes.length} athletes</TableHead>
+        </TableRow>
+      </TableFooter>
+    </Table>
+      
   );
 };
 
