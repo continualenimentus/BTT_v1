@@ -5,23 +5,11 @@ import { VStack } from "@/components/ui/vstack";
 import { Button } from "@/components/ui/button";
 
 export default function Index() {
-  const handleRaceFromScratch = () => {
-    console.log("Racet from scratch");
-  };
-
-  const handleRaceFromPreset =() =>{ 
-    console.log("Race from preset");
-  }
-
-  const handleMakeNewPreset =() =>{
-    console.log("Make new preset");
-  }
-
   return (
     <SafeAreaView>
       <VStack space="lg">
         <Link href='/raceFromPreset' style={styles.MainPageLink}>Race from preset</Link>
-        <Link href='/raceFromScratch' style={styles.MainPageLink}>Henlo there</Link>
+        <Link href='/raceFromScratch' style={styles.MainPageLink}>Race from scratch</Link>
         <Link href='/makeNewPreset' style={styles.MainPageLink}>Make new preset</Link>
         <Link href='/addAthlete' style={styles.MainPageLink}>Add athlete</Link>
       </VStack>
